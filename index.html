@@ -1,0 +1,81 @@
+<!-- JSON-formatted site, enabled by jQuery.coded by Mike De'Shazer -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>jQuery.codEd</title>
+    <link rel="shortcut icon" href="favicon.ico"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="jQuery.coded is a framework for rapid, neat web app development.">
+     <meta name="keywords" content="jquerycoded, jquery coded, {c}0dEd, jquery plugin, jquery framework, jquerymobile, reveal.js, swipe.js, bootstrap, integration, jquery plugin mashup, jquery addons, jquery 2013, new jquery plugins, json html, the coded, coded framework, new json format, coded json, json and jquery based framework, web app development, app education, app development classes new york city, app school nyc, agile development, rapid prototyping">
+    <meta name="author" content="Mike De'Shazer | @itsdeshazer | mikedeshazer.com">
+
+    <script src="coded/jqueryCoded.js"></script>
+    <script src="js/main.js"></script>
+  
+    <style>body {padding-top: 60px;padding-bottom: 40px;}.sidebar-nav { padding: 9px 0;} #coded{ display:none;} #stylesheets{ display:none;}</style>
+
+  </head>
+
+  <body>
+    <div id="coded">
+    [
+
+      
+
+      {"#navBar": {type:"div", "parent":"body", class:"navbar navbar-inverse navbar-fixed-top"}},
+        
+        {"#navBarInner": {type:"div", "parent":"#navBar", "class":"navbar-inner"}},
+          
+          {"#containerFluid": {type:"div", "parent":"#navBarInner", "class":"container-fluid", content:'<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></a><a class="brand" onclick="goTo(\'home\')">jQuery.coded</a>'}},
+          
+          {"#collapsible": {type:"div", "parent":"#containerFluid", "class":"nav-collapse collapse", content:'<p class="navbar-text pull-right"> <a href="#" class="navbar-link"> </a></p><ul class="nav"><li class="active"><a onclick="goTo(\'home\')" href="#home">Home</a></li><li><a onclick="goTo(\'about\')" href="#about">About</a></li><li><a onclick="goTo(\'author\')" href="#author">Author</a></li></ul>'}},
+
+      {"#containerFluid1": {type:"div", "parent":"body", class:"container-fluid"}},
+        
+        {"#rowInner": {type:"div", "parent":"#containerFluid1", "class":"row-fluid"}},
+          
+          {"#span3": {type:"div", "parent":"#rowInner", "class":"span3"}},
+
+            {"#sideBarNav": {type:"div", "parent":"#span3", "class":"well sidebar-nav", content:'<ul class="nav nav-list"><li class="nav-header">Explore</li><li class="active"><a onclick="goTo(\'download\')" href="#download">Download</a></li><li><a onclick="goTo(\'documentation\')" href="#docs">Documentation</a></li><li><a onclick="goTo(\'classes\')" href="#classes">Classes</a></li><li><a onclick="goTo(\'license\')" href="#license">License</a></li><li class="nav-header">Contact</li><li><a onclick="goTo(\'questions\')" href="#questions">Questions</a></li><li><a href="http://jquery.org/donate/">Donate</a></li></ul>', prependBool:true}},
+          
+          {"#span9": {type:"div", "parent":"#rowInner", "class":"", "style":{"margin-left":"25%"}}},
+
+            {"#heroUnit": {type:"div", "parent":"#span9", "class":"hero-unit", content:'<h1>A new way to {c}0dE</h1><p><br><span id="rapid">Rapid and neat.</span> For most web developers, having to pick between the two can either lead to missed deadlines or releases with horrible user experiences.  Fortunately, there are open-source libraries out there that help you create <span id="awesome">awesome user experiences quickly</span>. Unfortunately, quickly never seems to be quick enough, and sometimes combining these different libraries can lead to bumpy roads. <br>jQuery.coded is a JSON &<span id="framework"> jQuery-based framework</span> that combines many popular open-source libraries, CSS stylesheets, jQuery plugins, as well as a the {c}0dEd Bottlenecking Library to streamline <span id="streamline">web  and Phonegap app development</span> in  a rapid and neat fashion.<br><br></p><p><a class="btn btn-primary btn-large" onclick="goTo(\'documentation\')">Learn more &raquo;</a></p>'}},
+
+            {"#rowFluid": {type:"div", "parent":"#span9", "class":"row-fluid"}},
+
+              {"#theSpan1": {type:"div", "parent":"#rowFluid", "class":"span4", content:'<h2>lightBox</h2><p>$.coded.lightBox is a responsive light box that uses jQueryMobile\'s dialog method on phones and reveal.js\' stunning lightbox effects on desktops and tablets. </p><p><a class="btn" onclick="$.coded.lightBox(\'This is an example\', \'of $.coded.lightBox()\')">preview &raquo;</a></p>'}},
+
+              {"#theSpan2": {type:"div", "parent":"#rowFluid", "class":"span4", content:'<h2>slide</h2><p>$.coded.slide is a plugin that uses swipe.js to read JSON formatted content and morph it into swipable content on phones and tablets. </p><p></p>'}},
+
+              {"#theSpan3": {type:"div", "parent":"#rowFluid", "class":"span4", content:'<h2>request2View</h2><p>$.coded.request2View makes requesting and displaying information from the server simpler with awesome listview presets for content fully customizable parameters to streamline app data population. </p><p><a class="btn" onclick="goTo(\'questions\')">demo &raquo;</a></p>'}},
+
+              {"#theSpan4": {type:"div", "parent":"#rowFluid", "class":"span4", content:'<h2>mobile</h2><p>Using coded\'s JSON syntax you can specify when you have mobile content on a page to have it morph the entire page into a jQueryMobile-based page.</p><p><a class="btn" href="mobile.html" target="_blank">demo on mobile</a></p>'}},
+
+              {"#theSpan5": {type:"div", "parent":"#rowFluid", "class":"span4", content:'<h2>coded</h2><p>This new JSON syntax allows you to bring together your server\'s data and your user\'s experience on the front-end. </p><p><a class="btn" onclick="goTo(\'aboutJAM\')">learn more</a></p>'}}
+    ]
+  </div>
+
+  <div id="stylesheets">
+      [{"#bootstrap1": {"type":"stylesheet", "content": "css/bootstrap.css"}},
+
+        {"#bootstrap2": {"type":"stylesheet", "content": "css/bootstrap-responsive.css"}},
+
+        {"#bootstrap3": {"type":"stylesheet", "content": "css/bootstrap-docs.css"}}]
+
+  </div>
+ 
+    <script>
+
+      $('#stylesheets').coded();
+
+      $(document).ready(function(){
+          //coded it: Convert JSON to DOM.
+
+        $('#coded').coded();
+      });
+    </script>
+    <script src="js/collapse.js"></script>
+  </body>
+</html>

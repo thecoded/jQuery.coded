@@ -1,0 +1,17 @@
+php file
+
+include our db file for db functions - this INLCUDES the file you're linking to in the file you're currently in
+
+extract request header parameters-getting info from the application and setting them to varibles
+
+validate request header parameters
+
+start session-allows us to view session information(this is the step before to see if the user is logged in)
+
+validate the session varibles-if the session varibles are blank you are not signed in-if the session varible is set than the user is logged in
+
+logic-based on the sign in user-typically query the database
+
+echo a json response to our application
+
+return-end everything

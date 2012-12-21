@@ -1,0 +1,302 @@
+<html>
+	<head>
+		<script src="coded/jqueryCoded.js"></script>
+		<script>
+			$(document).ready(function(){
+				
+				$('#image').coded();
+				$('#div').coded();
+				$('#table').coded();
+				$('#select').coded();
+				
+				$('#radioButtons').coded();
+				$('#checkboxes').coded();
+				$('#passwordField').coded();
+				$('#inputField').coded();
+				$('#button').coded();
+				$('#span').coded();
+				$('#textarea').coded();
+				$('#custom').coded();
+				$('#listview').coded();
+			});
+
+		</script>
+	</head>
+
+
+	<body>
+		<!--
+		 <p style="font-size:20px">To create a web element with JAM, specify an element ID as the key to a JSON-formatted array(like you do when you write CSS and define an element's style. ) and as a "type" parameter of this element, specify "image". <br>In the "content" parameter, specify the image's URL. <br> In the "parent" parameter, specify which div (selected by ID (#) or class(.)) you would like this element to be a child of. If you do not specify a child element, the element will be added to the body of your document. <br>
+          	In the "listeners" parameter, use a JSON formatted string to determine the the event listeners that should be attached to the element, with the event as the key and the javascript callback function of the event  listener as the value.<br>  In the "class" parameter, use a string as the value to express which class in the stylesheet to apply to the element.<br>In the "style" parameter, use a JSON formatted string to express additional CSS rules to be applied to the element as overrides to defaults.<br>In the "prependBool" parameter, express "true" if you want the element to be prepended to its parent.
+
+          	 </p>
+-->
+		  <h3>Simple Image</h3>
+         
+          <div class="bs-docs-example" id="image">
+           [{"#logoImg": {"type": "image", "content": "http://media.npr.org/images/picture-show-flickr-promo.jpg", "parent":"#image", "prependBool":false, "listeners":{"click":"alert('hello')"}, "style":{width:"20%"}}}]
+          </div>
+<pre class="prettyprint linenums">
+{"#logoImg": {"type": "image", "content": "http://media.npr.org/images/picture-show-flickr-promo.jpg", "parent":"#image", "prependBool":false, "listeners":{"click":"alert('hello')"}, "style":{width:"20%"}}}
+</pre>
+
+
+          <hr class="bs-docs-separator">
+
+
+           <h3>Simple Div</h3>
+         
+          <div class="bs-docs-example" id="div">
+           [{"#helloDiv": {"type": "div", "content": "hi there", "parent":"#div", "style":{"background-color":"red", "font-size": "20px", "text-align":"center", "color":"white", "padding-top": "75px", "width":"300px", "height":"150px"}}}]
+          </div>
+<pre class="prettyprint linenums">
+{"#helloDiv": {"type": "div", "content": "hi there", "parent":"#div", "style":{"background-color":"red", "font-size": "20px", "text-align":"center", "color":"white", "padding-top": "75px", "width":"300px", "height":"150px"}}}
+</pre>
+
+
+          <hr class="bs-docs-separator">
+
+
+
+
+
+ <h3>Simple Table</h3>
+         
+          <div class="bs-docs-example" id="table">
+           [{"#tableId": {"type":"table", "content":  [["first row, first cell", "first row, second cell"],  ["second row, first cell", "second row, second cell"] ], "class":"table", "parent":"#table"}}]
+          </div>
+<pre class="prettyprint linenums">
+	 [{"#tableId": {"type":"table", "content":  [["first row, first cell", "first row, second cell"],  ["second row, first cell", "second row, second cell"] ], "class":"table", "parent":"#table"}}]
+
+	<center> <br> - or -<br></center>
+{"#tableId": {"type":"table", "content":  {"firstRowId":{"cellId1":"first row, first cell", "cellId2":"first row, second cell"}, "anotherRowId": {"cellId3":"second row, first cell", "cellId4":"second row, second cell"} }, "class":"table", "parent":"#table"}}
+</pre>
+
+
+          <hr class="bs-docs-separator">
+
+
+
+
+ <h3>Simple Select Element</h3>
+         
+          <div class="bs-docs-example" id="select">
+           [{"#select1": {"type":"select", "content":  {"choiceId":"choice 1", "choiceId2":"choice 2"}, parent:"#select"}}]
+          </div>
+<pre class="prettyprint linenums">
+  [{"#select1": {"type":"select", "content":  {"choiceId":"choice 1", "choiceId2":"choice 2"}, parent:"#select"}}]
+  <br><center> - or - <br>
+  [{"#select1": {"type":"select", "content": ["choice 1", choice 2"], parent:"#select"}}]
+</pre>
+
+
+          <hr class="bs-docs-separator">
+
+
+
+
+ <h3>Simple Listview</h3>
+         
+          <div class="bs-docs-example" id="listview">
+           [{"#newList": {type:"listview", "content":[{"title":"blah", "desc":"blah blah. Yay!", "desc2":"2 mi away", "link":"http://jquerycoded.com"}, , {"title":"blah 2", "desc":"blah blah blah. Yay!", "desc2":"4 mi away"}], "parent":"#listview"}}]
+          </div>
+<pre class="prettyprint linenums">
+{"#newList": {type:"listview", "content":[{"title":"blah", "desc":"blah blah. Yay!", "desc2":"2 mi away","link":"http://jquerycoded.com"}, {"title":"blah 2", "desc":"blah blah blah. Yay!", "desc2":"4 mi away"}], "parent":"#listview"}}
+</pre>
+
+
+          <hr class="bs-docs-separator">
+
+
+
+
+ <h3>Simple Checkboxes</h3>
+         
+          <div class="bs-docs-example" id="checkboxes">
+          [{"#check": {"type":"checkBoxes", "content":  {"checkId1":"choice 1", "checkId2":"choice 2"}, parent:"#checkboxes"}}]
+          </div>
+<pre class="prettyprint linenums">
+{"#check": {"type":"checkBoxes", "content":  {"checkId1":"choice 1", "checkId2":"choice 2"}, parent:"#checkboxes"}}
+</pre>
+
+
+          <hr class="bs-docs-separator">
+
+
+
+
+ <h3>Simple Radio Buttons</h3>
+         
+          <div class="bs-docs-example" id="radioButtons">
+           [{"#radio": {"type":"radioButtons", "content":  {"radioId1":"choice 1", "radioId2":"choice 2"}, parent:"#radioButtons"}}]
+          </div>
+<pre class="prettyprint linenums">
+{"#radio": {"type":"radioButtons", "content":  {"radioId1":"choice 1", "radioId2":"choice 2"}, parent:"#radioButtons"}}</pre>
+
+
+          <hr class="bs-docs-separator">
+
+
+
+
+ <h3>Simple Input Field</h3>
+         
+          <div class="bs-docs-example" id="inputField">
+           [{"#inputElem": {"type": "inputText", "content": "username", "parent":"#inputField"}}]
+          </div>
+<pre class="prettyprint linenums">
+ {"#inputElem": {"type": "inputText", "content": "username", "parent":"#inputField"}}
+</pre>
+
+
+          <hr class="bs-docs-separator">
+
+
+
+
+ <h3>Simple Password Field</h3>
+         
+          <div class="bs-docs-example" id="passwordField">
+           [{"#passElem": {"type": "inputPassword", "content": "password", "parent":"#passwordField"}}]
+          </div>
+<pre class="prettyprint linenums">
+{"#passElem": {"type": "inputPassword", "content": "password", "parent":"#passwordField"}}
+</pre>
+
+
+          <hr class="bs-docs-separator">
+
+
+ <h3>Simple Button</h3>
+         
+          <div class="bs-docs-example" id="button">
+           [{"#buttonElem": {"type": "button", "content": "click me", "parent":"#button", listeners:{"click":"alert('You clicked me!')"}}}]
+          </div>
+<pre class="prettyprint linenums">
+{"#buttonElem": {"type": "button", "content": "click me", "parent":"#button", listeners:{"click":"alert('You clicked me!')"}}}
+</pre>
+
+
+          <hr class="bs-docs-separator">
+
+
+
+ <h3>Stylesheets</h3>
+         
+          <div class="bs-docs-example" id="stylesheets1">
+           To import a simple CSS stylesheets, use this code:
+          </div>
+<pre class="prettyprint linenums">
+[{"#bootstrap1": {"type":"stylesheet", "content": "css/bootstrap.css"}},
+
+        {"#bootstrap2": {"type":"stylesheet", "content": "css/bootstrap-responsive.css"}},
+
+        {"#bootstrap3": {"type":"stylesheet", "content": "css/bootstrap-docs.css"}}]
+</pre>
+
+
+          <hr class="bs-docs-separator">
+
+
+
+ <h3>Simple Span</h3>
+         
+          <div class="bs-docs-example" id="span">
+             [{"#helloSpan": {"type": "span", "content": "example span", "parent":"#span"}}]
+          </div>
+<pre class="prettyprint linenums">
+{"#helloSpan": {"type": "span", "content": "example span", "parent":"#span"}}</pre>
+
+
+          <hr class="bs-docs-separator">
+
+ <h3>Simple Textarea</h3>
+         
+          <div class="bs-docs-example" id="textarea">
+            [{"#textareaElem": {"type": "textarea", "content": "enter some words...", "parent":"#textarea"}}]
+          </div>
+<pre class="prettyprint linenums">
+{"#textareaElem": {"type": "textarea", "content": "enter some words...", "parent":"#textarea"}}
+</pre>
+
+
+
+ <h3>Swipable Content on Mobile</h3>
+         
+          <div class="bs-docs-example" id="swipableContent">
+           If you're on a mobile device, check out this <a href="mobile.html" target="_blank"> demo</a>
+          </div>
+<pre class="prettyprint linenums">
+[{"#slider":{"type": "swipableContainer", "parent":"#mainPage"}},
+						{"#sliderElem1":{"type": "swipableContent", "parent":"#slider", "content":"swipable content goes here.."}},
+						{"#sliderElem2":{"type": "swipableContent", "parent":"#slider",  "content":'more swipable content goes here', style:{"background-color":"#1C1C1C"}}}]
+</pre>
+
+
+          <hr class="bs-docs-separator">
+
+
+
+ <h3>Your Custom Elements and HTML 5</h3>
+         
+          <div class="bs-docs-example" id="custom">
+            [{"#customElem": {"type": "anythingYouMakeUp", "content": "hi there", "parent":"#custom"}}]
+          </div>
+<pre class="prettyprint linenums">
+{"#customElem": {"type": "anythingYouMakeUp", "content": "hi there", "parent":"#custom"}}
+</pre>
+
+
+          <hr class="bs-docs-separator">
+
+
+
+
+
+
+
+
+		<div id="blah" style="display:none">
+
+<!--
+		[
+			{"#tableBootstrap": {"type":"tableBootstrap", "content":  {"wewe":{"adssd":"sdsdsd"}, "sdsdsd": {"adssd":"sdsdsd"} }}},
+
+			{"#select2": {"type":"selectBootstrap", "content":  {"adssd":"sdsdsd", "adssd11":"sdsdsd11"}}},
+
+			{"#radio": {"type":"checkBoxesBootstrap", "content":  {"adssd":"sdsdsd", "adssd11":"sdsdsd11"}}},
+
+		{"#logoImg": {"type": "image", "content": "http://media.npr.org/images/picture-show-flickr-promo.jpg", "parent":"body", "prependBool":false, "listeners":{"click":"alert('hello')"}, "style":{width:"20%"}}},
+
+		{"#helloDiv": {"type": "div", "content": "hi there", "parent":"#blah", "style":{"background-color":"red", "font-size": "20px", "text-align":"center", "color":"white", "padding-top": "75px", "width":"300px", "height":"150px"}}},
+
+		{"#inputElem": {"type": "inputText", "content": "username", "parent":"#blah"}},
+
+		{"#inputPassword": {"type": "inputPassword", "content": "password", "parent":"#blah"}},
+		{"#theSpan": {"type": "span", "content": "this is a span", "parent":"#blah"}},
+
+		{"#theTable": {"type": "table", "content": "<tr><td>dfdfd</td><td>fddfdf</td></tr>", "parent":"#blah"}},
+
+		{"#newList": {type:"listview", "content":[{"title":"blah", "image": "http://jquerymobile.com/demos/1.2.0/docs/lists/images/album-af.jpg", "desc":"blah blah. Yay!"}], "parent":"body"}},
+
+		]
+-->
+
+		</div>
+
+<div id="stylesheets">
+      [{"#bootstrap1": {"type":"stylesheet", "content": "css/bootstrap.css"}},
+
+        {"#bootstrap2": {"type":"stylesheet", "content": "css/bootstrap-responsive.css"}},
+
+        {"#bootstrap3": {"type":"stylesheet", "content": "css/bootstrap-docs.css"}}]
+
+  </div>
+ 
+    <script>
+
+      $('#stylesheets').coded();
+
+      </script>
+	</body>
+</html>

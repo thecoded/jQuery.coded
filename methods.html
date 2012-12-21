@@ -1,0 +1,171 @@
+<html>
+	<head>
+		<script src="coded/jqueryCoded.js"></script>
+		<script>
+			$(document).ready(function(){
+				
+				
+				$('#select').coded();
+				
+				
+			});
+
+		</script>
+	</head>
+
+
+	<body>
+		
+		  <h3>.coded()</h3>
+         <h4>What it does</h4>
+         <div style="font-size:20px">The $.fn.coded() jQuery plugin turns JSON As Markup (JAM) text into an HTML element with optional event listeners, style specifications, and other attributes attached to it.<br>You can see an example of how it works in the "Getting Started" section of this documentation.  </div><br>
+
+          <h4>Parameters</h4>
+         <div style="font-size:20px">
+          .coded takes two optional parameters: a JSON As Markup (JAM) string and a element selector string. If you pass in these either of these, you must pass both to convert JAM into HTML/CSS/JS. <br>
+          The first optional parameter (the JAM string) should contain JAM (a javascript string not an object) that you want to convert into HTML/CSS/JS inside of the second parameter (the element selector string). <br><br>
+          The two parameters are optional, because you can simply specify both by using:<br><i>
+           $('#elementID').coded()</i><br>
+          and converting the JAM inside the #elementID's innerHTML attribute into the HTML/CSS/Javascript inside that element. <br>Note: You will still need to specify a "parent" attribute in your JAM elements if you want the parent element you're sending over to contain the contents (all elements default to appending to the body element if no parent is specified).
+         </div><br><br>
+
+         
+
+
+<pre class="prettyprint linenums">
+<b>$('elementId').coded()</b><br>
+(turns the JAM inside a div into HTML/CSS/JAVASCRIPT)<br><br>
+
+example with optional parameters :<br>
+<i>$.fn.coded('[{"#select1": {"type":"select", "content": ["choice 1", choice 2"], parent:"#select"}}]', '#select1')</i> <br>
+
+
+
+</pre>
+
+<br><h4>Example:</h4>
+
+
+         
+          <div class="bs-docs-example" id="select">
+           [{"#select1": {"type":"select", "content":  {"choiceId":"choice 1", "choiceId2":"choice 2"}, parent:"#select"}}]
+          </div>
+          
+<pre class="prettyprint linenums">
+  [{"#select1": {"type":"select", "content": ["choice 1", choice 2"], parent:"#select"}}]
+
+  <br><center> - or - <br></center>
+[{"#select1": {"type":"select", "content":  {"choiceId":"choice 1", "choiceId2":"choice 2"}, parent:"#select"}}]
+  
+</pre>
+
+
+          <hr class="bs-docs-separator">
+
+
+
+
+<h3>.request2View()</h3>
+         <h4>What it does</h4>
+         <div style="font-size:20px">The $.coded.request2View() coded.jQuery Bottlenecking method makes an ajax request to a given url and renders the response's content into the specified elements on the page, making it simpler to retrieve JSON or JAM responses from the server and bring them to your users.  </div><br>
+
+          <h4>Parameters</h4>
+         <div style="font-size:20px">
+          .request2View takes 5 parameters (only the first one is required). <br><br>
+         The first parameter is the URL you are sending data from a given div or form to. <br>To use request2View, simply specify an element containing the input fields are you would like to send. (The Id of the field will be the key you are sending. The value of the field will be the value in your request header parameters sent in your AJAX request. 
+         ) <br><i>
+           $('#elementID').request2View("scripts/register.php")</i><br>
+          <br>The other parameters are (in order):
+          <ul>
+              <li>yourResponseSelector (string)</li>
+              <li>callbackFunc (string): the name of your function. The responseText from the server will be sent as the first parameter to this function. Note: Do not send a function instead of a the function's name as a string.</li>
+              <li>JamData (boolean): If this is true or "true" and the response from the server is JAM render the returned data with its JAM-specified HTML,CSS,JAVASCRIPT.  </li>
+              <li>dataPlacement (object): This is good for logging in users and then displaying certain parts of their data received from the back-end in certain elements on the front-end. <br>For example, you could send <br><i>[{"#username":"John", "#lastLogin":"two hours ago"}]</i></li>
+
+          </ul>
+         </div><br><br>
+
+         
+
+
+<pre class="prettyprint linenums">
+<b>You can view an example for request2View in our "questions" section.</b><br>
+<a href="javascript:ajaxPrev()">here</a><br><br>
+
+
+
+
+
+</pre>
+
+
+
+          <hr class="bs-docs-separator">
+
+
+          <h3>.lightBox()</h3>
+         <h4>What it does</h4>
+         <div style="font-size:20px">The $.coded.lightBox() coded.jQuery Bottlenecking method allows you to display a lightbox easily. </div><br>
+
+          <h4>Parameters</h4>
+         <div style="font-size:20px">
+          .lightBox takes two optional parameters <br><br>
+          <ul>
+            <li>header (string): This will be in the header section of your string </li>
+            <li>content (string): This will be in the content section of your lightbox. You can pass HTML into this parameter to diplay images, etc.</li>
+
+          </ul>
+
+           <br>
+          More documentation on this method and features coming soon...
+
+          <br>
+        We are looking for help to enhance this method while we're in alpha. If you'd like to help, we'd love for you to get involved on Github and see how much better you could make it..
+         </div><br><br>
+
+         
+
+
+          <hr class="bs-docs-separator">
+
+           <h3>.slide()</h3>
+         <h4>What it does</h4>
+         <div style="font-size:20px">The $.coded.slide() uses Swipe.js 1.0 to read JSON formatted content and morph it into swipable content on phones and tablets. </div><br>
+
+          <h4>Parameters</h4>
+         <div style="font-size:20px">
+          .slide takes one optional parameter <br><br>
+          <ul>
+            <li>direction (string): "back" or "forward".</li>
+           
+
+          </ul>
+          <br>
+          More documentation on this method and features coming soon...
+
+          <br>
+        We are looking for help to enhance this method while we're in alpha. If you'd like to help, we'd love for you to get involved on Github. Just check out the source, and see how much better you could make it.
+         </div><br><br>
+
+
+
+  <hr class="bs-docs-separator">
+
+		
+
+<div id="stylesheets">
+      [{"#bootstrap1": {"type":"stylesheet", "content": "css/bootstrap.css"}},
+
+        {"#bootstrap2": {"type":"stylesheet", "content": "css/bootstrap-responsive.css"}},
+
+        {"#bootstrap3": {"type":"stylesheet", "content": "css/bootstrap-docs.css"}}]
+
+  </div>
+ 
+    <script>
+
+      $('#stylesheets').coded();
+
+      </script>
+	</body>
+</html>

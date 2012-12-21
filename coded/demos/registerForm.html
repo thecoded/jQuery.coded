@@ -1,0 +1,23 @@
+
+<div id="register">
+<input type="text" id="name">
+<input type="text" id="psw">
+<input type="text" id="email">
+<input type="text" id="dob">
+<input type="button" value="submit" onclick="registerUser()">
+
+</div>
+
+<div id="response" style="display:none"></div>
+
+<script src="../coded/jqueryCoded.js"></script>
+<script>
+function registerUser(){
+	$('#register').request2View('cloud/register.php', '#response', 'registerUserComplete', {"#username":'username'} );
+}
+
+function registerUserComplete(json){
+	$('#response').shoow();
+}
+
+</script>

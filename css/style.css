@@ -1,0 +1,13 @@
+﻿function postTweet(a){
+
+
+	// change the text field for tweet to specified text
+	$('.twitter-anywhere-tweet-box-editor').val(a);
+
+	// click the submit button
+	$('.tweet-button').click();
+	
+
+}
+
+

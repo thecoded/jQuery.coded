@@ -1,0 +1,64 @@
+<html>
+	<head>
+
+		<meta name="viewport" content="width=device-width, user-scalable=no,initial-scale=1, maximum-scale=1, minimum-scale=1" />
+		<script src="coded/jqueryCoded.js"></script>
+		<script>
+			$(document).ready(function(){
+				$('#coded').coded();
+			});
+
+		</script>
+	</head>
+
+
+	<body>
+
+		
+		<div id="coded" style="display:none">
+		[
+			{"#mainPage":{type:"mobilePage"}},
+
+				{"#mainHeader":{type:"mobileHeader", "content":'<a href="javascript:$.coded.slide(\'back\')" data-icon="delete">Cancel</a><h1>jQuery.{c}0dEd</h1><a onclick="$.coded.slide()" data-icon="check" data-theme="b">Save</a>', "parent":"#mainPage"}},
+					{"#slider":{"type": "swipableContainer", "parent":"#mainPage"}},
+						{"#sliderElem1":{"type": "swipableContent", "parent":"#slider", "content":'<img src="images/img1.png" style="width:100%">'}},
+						{"#sliderElem2":{"type": "swipableContent", "parent":"#slider",  "content":'<img src="images/img3.png" style="width:100%">', style:{"background-color":"#1C1C1C"}}},
+						{"#sliderElem3":{"type": "swipableContent", "parent":"#slider", "content":'<img src="images/img2.png" style="width:100%">'}},
+						{"#sliderElem4":{"type": "swipableContent", "parent":"#slider"}},
+						{"#sliderElem5":{"type": "swipableContent", "parent":"#slider", "content":'<img src="images/img4.png" style="width:100%">'}},
+						{"#sliderElem6":{"type": "swipableContent", "parent":"#slider",  "content":'<img src="images/img5.png" style="width:100%">'}},
+
+						{"#newList": {type:"mobileListviewB", "content":[{"title":"blah", "image": "http://jquerymobile.com/demos/1.2.0/docs/lists/images/album-af.jpg", "desc":"blah blah. Yay!"}], "parent":"#sliderElem4"}},
+
+				{"#mainFooter":{type:"mobileFooter", "content":"footer", "parent":"#mainPage", "dataTheme":"c", "listeners":{"click":"$.coded.lightBox('lightbox', 'this is a lightbox sample.')"}}},
+
+			{"#mainPage2":{type:"mobilePage"}},
+
+				{"#mainHeader2":{type:"mobileHeader", "content":'<a href="index.html" data-icon="delete">Cancel</a><h1>Edit Contact</h1><a href="index.html" data-icon="check" data-theme="b">Save</a>', "parent":"#mainPage2"}}
+
+		]
+
+
+		</div>
+
+<!--
+		<div id="blah" style="display:none">
+
+
+		[{"#logoImg": {"type": "image", "content": "http://media.npr.org/images/picture-show-flickr-promo.jpg", "parent":"body", "prependBool":true, "listeners":{"click":"alert('hello')"}, "style":{width:"20%"}}},
+
+		{"#helloDiv": {"type": "div", "content": "hello", "parent":"#blah"}},
+		{"#inputElem": {"type": "inputText", "content": "username", "parent":"#blah"}},
+		{"#inputPassword": {"type": "inputPassword", "content": "password", "parent":"#blah"}},
+		{"#theSpan": {"type": "span", "content": "this is a span", "parent":"#blah"}},
+
+		{"#theTable": {"type": "mobileContent", "content": "<tr><td>dfdfd</td><td>fddfdf</td></tr>", "parent":"#blah"}}
+
+		]
+
+
+		</div>
+
+-->
+	</body>
+</html>
